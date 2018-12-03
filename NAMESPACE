@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+importFrom("grDevices", "dev.new")
+importFrom("graphics", "lines", "hist", "box", "barplot")
+importFrom("stats", "pchisq")
