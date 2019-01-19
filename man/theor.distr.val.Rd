@@ -25,7 +25,8 @@ The chosen position of the digit (from the left).
 The function returns a vector contening the probability distribution of the model determined by the upper bound value.
 }
 
-\references{S. Blondeau Da Silva (2018). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. \url{https://arxiv.org/abs/1804.06186}.
+\references{
+S. Blondeau Da Silva (2019). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics. In press.
 
 S. Blondeau Da Silva (2018). Benford or not Benford: new results on digits beyond the first. \url{https://arxiv.org/abs/1805.01291}.
 }

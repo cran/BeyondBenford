@@ -25,9 +25,9 @@ The function returns Benford's probability.
 \references{
 F. Benford (1938). The law of anomalous numbers. Proceedings of the American Philosophical Society, 78:127-131. 
 
-T. Hill (1995). The significant-digit phenomenon. The American Mathematical Monthly, 102(4):322-327. \doi{10.2307/2974952}.
+T. Hill (1995). The significant-digit phenomenon. The American Mathematical Monthly, 102(4):322-327. 
 
-R. Newcomb (1881). Note on the frequency of use of the different digits in natural numbers. American Journal of Mathematics, 4:39-40. \doi{10.2307/2369148}.
+R. Newcomb (1881). Note on the frequency of use of the different digits in natural numbers. American Journal of Mathematics, 4:39-40.
 }
 \author{
 Blondeau Da Silva St\'ephane
