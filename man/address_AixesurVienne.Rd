@@ -10,7 +10,7 @@ Street addresses of Aixe-sur-Vienne
 Street addresses of Aixe-sur-Vienne, a town of approximately 5800 inhabitants in Haute-Vienne (France).
 }
 
-\usage{address_AixesurVienne}
+\usage{data(address_AixesurVienne)}
 
 \format{
 A factor containing all 1911 existing street address numbers.

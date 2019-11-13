@@ -10,7 +10,7 @@ Street addresses of Limoges
 Street addresses of Limoges, a city of approximately 133600 inhabitants in Haute-Vienne (France).
 }
 
-\usage{address_Limoges}
+\usage{data(address_Limoges)}
 
 \format{
 A factor containing all 35975 existing street address numbers.

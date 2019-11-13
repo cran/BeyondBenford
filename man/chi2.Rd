@@ -17,7 +17,7 @@ chi2(dat, mod = "ben", upbound = ceiling(max(dat)), dig = 1, pval = 0)
 The considered dataset, a data frame containing non-zero real numbers.
 }
   \item{mod}{
-If mod="ben", the theorical distribution considered is that of Benford, else it is Blondeau Da Silva's ones which is chosen.
+A character string. If mod="ben", the theorical distribution considered is that of Benford, else it is Blondeau Da Silva's ones which is chosen.
 }
   \item{upbound}{
 A positive integer, which characterizes the data. All (or most) of the data are lower than this "upper bound".
@@ -39,7 +39,7 @@ K. Pearson (1900). On the criterion that a given system of deviations from the p
 }
 
 \author{
-Blondeau Da Silva Stephane
+Blondeau Da Silva St\'ephane
 }
 
 \note{This warning message can appear: NAs introduced during the automatic conversion.

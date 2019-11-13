@@ -11,7 +11,7 @@ Street addresses of Pierre-Buffiere, a small town of approximately 1200 inhabita
 }
 
 
-\usage{address_PierreBuffiere}
+\usage{data(address_PierreBuffiere)}
 
 \format{
 A factor containing all 346 existing street address numbers.

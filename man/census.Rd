@@ -9,7 +9,7 @@ Alabama census
 Populations in Alabama cities and towns.
 }
 
-\usage{census}
+\usage{data(census)}
 
 \format{
 A data frame containing the populations of all 460 Alabama cities or towns (dimension: one row and 460 columns).

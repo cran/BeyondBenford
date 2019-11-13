@@ -24,7 +24,7 @@ A vector containing the frequencies of each figure in ascending order. Its lengt
 }
 
 \author{
-Blondeau Da Silva Stephane
+Blondeau Da Silva St\'ephane
 }
 
 \note{This warning message can appear: NAs introduced during the automatic conversion.

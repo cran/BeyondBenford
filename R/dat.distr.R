@@ -1,5 +1,5 @@
 dat.distr <-
-function(dat,xlab="data",ylab="Frequency",main="Distribution of data",theor=TRUE,nclass=50,col="lightblue",conv=0,upbound=ceiling(max(dat)),dig=1,colt="red",ylim=NULL,border="blue",nchi=0,legend=TRUE,bg.leg="gray85"){
+function(dat,xlab="Data",ylab="Frequency",main="Distribution of data",theor=TRUE,nclass=50,col="lightblue",conv=0,upbound=ceiling(max(dat)),dig=1,colt="red",ylim=NULL,border="blue",nchi=0,legend=TRUE,bg.leg="gray85"){
 
 	prep<-function(dat){dat=as.data.frame(dat); rownb=dim(dat)[1]; colnb=dim(dat)[2];
 	for (j in 1:colnb) if (is.numeric(dat[,j])==FALSE) dat[,j]=as.numeric(as.character(dat[,j])); 
@@ -28,4 +28,4 @@ if (nchi!=0) {max=max(data,upbound); freq.obs=rep(0,nchi);
 	print(c("Class freq.: ",freq.obs)); print(c("Theor. freq.:",Blon.class));
 	if(Blon.class[nchi]<5) return("Chi2 can not be applied: at least one insufficient theoretical frequency") 
 	else {chi=0; for (i in 1:nchi) {chi=chi+(freq.obs[i]-Blon.class[i])**2/Blon.class[i]}; 			
-	return(data.frame(chi2=c("Chi2 value is:",chi),pval=c("The p-value is:",1-pchisq(chi,nchi-1))))}}}
+	return(data.frame(chi2=c("Chi2 value is:",nchi*chi),pval=c("The p-value is:",1-pchisq(nchi*chi,nchi-1))))}}}

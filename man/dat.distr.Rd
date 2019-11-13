@@ -7,7 +7,7 @@ Data distribution
 The function returns the histogram of the data. It can also plot one of the Blondeau Da Silva's theoretical distributions (thanks to an "upper bound"): this ideal theoretical distribution must be at least approximately followed by the data for the use of Blondeau Da Silva's model to be well-founded. A specific chi-squared statistic can also be computed to find out whether the data distribution is consistent with the theoretical distribution or not. 
 }
 \usage{
-dat.distr(dat, xlab = "data", ylab = "Frequency", main = "Distribution of data", 
+dat.distr(dat, xlab = "Data", ylab = "Frequency", main = "Distribution of data", 
 theor = TRUE, nclass = 50, col = "lightblue", conv = 0, upbound = ceiling(max(dat)),
 dig = 1, colt = "red", ylim = NULL, border = "blue", nchi = 0, legend = TRUE, 
 bg.leg = "gray85")
@@ -68,14 +68,14 @@ The background color for the legend box.
 The histogram of the data along with optional Blondeau Da Silva's theoretical distributions and a data frame containing the chi-squared statistic and its associated p-value if requested.
 }
 \references{
-S. Blondeau Da Silva (2019). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics. In press.
+S. Blondeau Da Silva (2019). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics. \doi{10.1007/s40304-018-00172-1}.
 
 S. Blondeau Da Silva (2018). Benford or not Benford: new results on digits beyond the first. \url{https://arxiv.org/abs/1805.01291}.
 
 K. Pearson (1900). On the criterion that a given system of deviations from the probable in the case of a correlated system of variables is such that it can be reasonably supposed to have arisen from random sampling. Philosophical Magazine, 50(302):157-175.
 }
 \author{
-Blondeau Da Silva Stephane
+Blondeau Da Silva St\'ephane
 }
 \note{This warning message can appear: NAs introduced during the automatic conversion.
 This is due to the fact that some data are not numerical in the entered dataset. Non numerical values and zeros are not counted.
