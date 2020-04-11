@@ -5,11 +5,12 @@ Pearson's chi-squared test
 }
 
 \description{
-It is a test of goodness of fit to find out whether the distribution of first (second, third or fourth) digit in the studied data differs from two theoretical distributions (that of Benford and that of Blondeau Da Silva) or not. The null hypothesis states that the studied distribution is consistent with the considered theoretical distribution. 
+It is a test of goodness of fit to find out whether the distribution of first (second, third or fourth) digit in the studied data differs from two theoretical distributions (that of Benford and that of Blondeau Da Silva) or not. The null hypothesis states that the studied distribution is consistent with the considered theoretical distribution.
 }
 
 \usage{
-chi2(dat, mod = "ben", upbound = ceiling(max(dat)), dig = 1, pval = 0)
+chi2(dat, mod = "ben", lwbound = max(floor(min(abs(dat))) + 1, (10^(dig - 1))), 
+upbound = ceiling(max(dat)), dig = 1, pval = 0)
 }
 
 \arguments{
@@ -18,6 +19,9 @@ The considered dataset, a data frame containing non-zero real numbers.
 }
   \item{mod}{
 A character string. If mod="ben", the theorical distribution considered is that of Benford, else it is Blondeau Da Silva's ones which is chosen.
+}
+  \item{lwbound}{
+A positive integer, which characterizes the data. All (or most) of the data are greater than this "lower bound".
 }
   \item{upbound}{
 A positive integer, which characterizes the data. All (or most) of the data are lower than this "upper bound".
@@ -45,7 +49,6 @@ Blondeau Da Silva St\'ephane
 \note{This warning message can appear: NAs introduced during the automatic conversion.
 This is due to the fact that some data are not numerical in the entered dataset. Non numerical values and zeros are not counted.
 }
-
 
 \examples{
 data(address_PierreBuffiere)

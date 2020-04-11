@@ -23,7 +23,7 @@ S. Blondeau Da Silva (2019). Benford or not Benford: a systematic but not always
 
 S. Blondeau Da Silva (2018). Benford or not Benford: new results on digits beyond the first. \url{https://arxiv.org/abs/1805.01291}.
 
-S. Blondeau Da Silva (2019). BeyondBenford: An R Package to Determine Which of Benford's or BDS's Distributions is the Most Relevant. \url{https://arxiv.org/abs/1910.06104}.
+S. Blondeau Da Silva (2019). BeyondBenford: An R Package to Determine Which of Benford's or BDS's Distributions is the Most Relevant. \url{https://arxiv.org/abs/1910.06104}. \url{https://hal.archives-ouvertes.fr/hal-02310013}.
 
 T. Hill (1995). The significant-digit phenomenon. The American Mathematical Monthly, 102(4):322-327.
 
@@ -43,7 +43,7 @@ dat.distr(address_PierreBuffiere,nchi=6)
 dat.distr(census,theor=0,nclass=100,dig=3)
 dat.distr(address_AixesurVienne,upbound=75)
 
-digit.distr(address_AixesurVienne,mod="ben&blo",upbound=75)
+digit.distr(address_AixesurVienne,mod="ben&blo",lwbound=5,No.sd=1,Sd.pr=1)
 digit.distr(address_PierreBuffiere,mod="blo",dig=2)
 
 chi2(address_PierreBuffiere,dig=2,pval=1)

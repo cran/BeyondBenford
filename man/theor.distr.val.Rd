@@ -5,14 +5,17 @@ Theoretical distribution
 }
 
 \description{
-The function returns the theorical probability distribution described by Blondeau Da Silva for data. If the dataset follows this particular distribution well enough, it enables not to use Benford's values of first (second, third or fourth) digit distribution but rather Blondeau Da Silva's ones. The distribution depends on an upper bound, which characterizes the data.
+The function returns the theorical probability distribution described by Blondeau Da Silva for data. If the dataset follows this particular distribution well enough, it enables not to use Benford's values of first (second, third or fourth) digit distribution but rather Blondeau Da Silva's ones. The distribution depends on a lower and an upper bound, which characterize the data.
 }
 
 \usage{
-theor.distr.val(upbound, dig = 1)
+theor.distr.val(lwbound, upbound, dig = 1)
 }
 
 \arguments{
+  \item{lwbound}{
+A positive integer, which characterizes the data. All (or most) of the data are greater than this "lower bound".
+}
   \item{upbound}{
 A positive integer, which characterizes the data. All (or most) of the data are lower than this "upper bound".
 }
@@ -37,7 +40,7 @@ Blondeau Da Silva St\'ephane
 
 
 \examples{
-theor.distr.val(10)
+theor.distr.val(10,27)
 
 }
 

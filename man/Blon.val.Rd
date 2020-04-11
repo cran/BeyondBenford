@@ -4,13 +4,16 @@
 Blondeau Da Silva's values
 }
 \description{
-The function returns Blondeau Da Silva's probability that a figure is at a given position (once the associated upper bound has been specified) and, if requested, the associated standard deviation.
+The function returns Blondeau Da Silva's probability that a figure is at a given position (once the associated lower and upper bounds have been specified) and, if requested, the associated standard deviation.
 }
 \usage{
-Blon.val(upbound, fig, dig = 1, sd = 0)
+Blon.val(lwbound, upbound, fig, dig = 1, sd = 0)
 }
 
 \arguments{
+  \item{lwbound}{
+A positive integer, which characterizes the data. All (or most) of the data are greater than this "lower bound".
+}
   \item{upbound}{
 A positive integer, which characterizes the data. All (or most) of the data are lower than this "upper bound".
 }
@@ -38,6 +41,6 @@ Blondeau Da Silva St\'ephane
 }
 
 \examples{
-Blon.val(825, 5, dig = 3)
+Blon.val(171,825, 5, dig = 3)
 }
 

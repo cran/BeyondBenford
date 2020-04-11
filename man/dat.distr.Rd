@@ -4,13 +4,15 @@
 Data distribution
 }
 \description{
-The function returns the histogram of the data. It can also plot one of the Blondeau Da Silva's theoretical distributions (thanks to an "upper bound"): this ideal theoretical distribution must be at least approximately followed by the data for the use of Blondeau Da Silva's model to be well-founded. A specific chi-squared statistic can also be computed to find out whether the data distribution is consistent with the theoretical distribution or not. 
+The function returns the histogram of the data. It can also plot one of the Blondeau Da Silva's theoretical distributions (thanks to 
+a lower and an upper bound): this ideal theoretical distribution must be at least approximately followed by the data for the use of Blondeau Da Silva's model to be well-founded. A specific chi-squared statistic can also be computed to find out whether the data distribution is consistent with the theoretical distribution or not. 
 }
 \usage{
 dat.distr(dat, xlab = "Data", ylab = "Frequency", main = "Distribution of data", 
-theor = TRUE, nclass = 50, col = "lightblue", conv = 0, upbound = ceiling(max(dat)),
-dig = 1, colt = "red", ylim = NULL, border = "blue", nchi = 0, legend = TRUE, 
-bg.leg = "gray85")
+theor = TRUE, nclass = 50, col = "lightblue", conv = 0, 
+lwbound = max(floor(min(abs(dat))) + 1, (10^(dig - 1))), 
+upbound = ceiling(max(dat)), dig = 1, colt = "red", ylim = NULL, border = "blue", 
+nchi = 0, legend = TRUE, bg.leg = "gray85")
 }
 
 \arguments{
@@ -37,6 +39,9 @@ The color used to fill the bars of the histogram. NULL yields unfilled bars.
 }
   \item{conv}{
 If conv=1, all values of the dataset are multiplied by 10^k where k is the smallest positive integer such that all non-zero numerical values in the newly multiplied data frame have an absolute value greater than or equal to 1.
+}
+  \item{lwbound}{
+A positive integer, which characterizes the data. All (or most) of the data are greater than this "lower bound".
 }
   \item{upbound}{
 A positive integer, which characterizes the data. All (or most) of the data are lower than this "upper bound".
@@ -90,7 +95,8 @@ data(census)
 dat.distr(census,theor=0,nclass=100,dig=3)
 
 data(address_AixesurVienne)
-dat.distr(address_AixesurVienne,upbound=75)
+dat.distr(address_AixesurVienne,lwbound=3,upbound=75)
 
 }
+
 

@@ -29,5 +29,6 @@ function(dat,dig=1){
 
 dat=prep(dat); 
 if (dig==1) {vecnum=rep(0,9); for (i in 1:dim(dat)[1]) {for (j in 1:dim(dat)[2]) if (digit(dat[i,j])!="?") vecnum[digit(dat[i,j])]=vecnum[digit(dat[i,j])]+1}; return(vecnum)} 
-else {vecnum=rep(0,10); for (i in 1:dim(dat)[1]) {for (j in 1:dim(dat)[2]) if (digit(dat[i,j],dig=dig)!="?") vecnum[digit(dat[i,j],dig=dig)+1]=vecnum[digit(dat[i,j],dig=dig)+1]+1}; 
-return(vecnum)}}
+else if (dig<=4) {vecnum=rep(0,10); for (i in 1:dim(dat)[1]) {for (j in 1:dim(dat)[2]) if (digit(dat[i,j],dig=dig)!="?") vecnum[digit(dat[i,j],dig=dig)+1]=vecnum[digit(dat[i,j],dig=dig)+1]+1}; 
+return(vecnum)}
+else return("Non valid digit")}

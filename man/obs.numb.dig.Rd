@@ -9,7 +9,7 @@ The function returns the frequencies of each figure at a given position in the c
 \usage{
 obs.numb.dig(dat, dig = 1)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{dat}{
 The considered dataset, a data frame containing non-zero real numbers.
@@ -36,4 +36,5 @@ data(census)
 obs.numb.dig(census, dig=2)
 
 }
+
 

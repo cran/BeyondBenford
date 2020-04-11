@@ -22,3 +22,4 @@ A factor containing all 346 existing street address numbers.
 
 \url{https://www.data.gouv.fr/fr/datasets/base-d-adresses-nationale-ouverte-bano/} (\url{http://bano.openstreetmap.fr/data/}).
 }
+

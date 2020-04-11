@@ -4,7 +4,7 @@
 
 \title{
 Alabama census
-} 
+}
 \description{
 Populations in Alabama cities and towns.
 }

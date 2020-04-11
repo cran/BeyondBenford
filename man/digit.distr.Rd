@@ -8,9 +8,10 @@ Distribution of figures in a given position
 The function returns histograms of distribution of figures in a given position: (i) in the dataset, (ii) due to Benford, (iii) due to Blondeau Da Silva. Error bars can be added to the plotted histogram.
 }
 \usage{
-digit.distr(dat, mod = "ben", upbound = ceiling(max(dat)), dig = 1, col = c("#E69F00",
- "#999999"), colbl = c("#AAFFAA", "#999999"), colbebl = c("#E69F00", "#AAFFAA", 
-"#999999"), main = "Distribution of digits", No.sd = 0, Sd.pr = 0)
+digit.distr(dat, mod = "ben", lwbound = max(floor(min(abs(dat))) + 1, (10^(dig - 1))), 
+upbound = ceiling(max(dat)), dig = 1, col = c("#E69F00", "#999999"), 
+colbl = c("#AAFFAA", "#999999"), colbebl = c("#E69F00", "#AAFFAA", "#999999"), 
+main = "Distribution of digits", No.sd = 0, Sd.pr = 0)
 }
 
 \arguments{
@@ -19,6 +20,9 @@ The considered dataset, a data frame containing non-zero real numbers.
 }
   \item{mod}{
 A character string. If mod="ben", the data histogram and that of Benford are displayed, if mod="ben&blo", the data histogram, that of Benford and that of Blondeau Da Silva are plotted, and otherwise the data histogram and that of Blondeau Da Silva are given.
+}
+  \item{lwbound}{
+A positive integer, which characterizes the data. All (or most) of the data are greater than this "lower bound".
 }
   \item{upbound}{
 A positive integer, which characterizes the data. All (or most) of the data are lower than this "upper bound".
@@ -39,7 +43,7 @@ A vector containing three colors used to fill the bars of the histogram, if mod=
 The title of the graph.
 }
   \item{No.sd}{
-The positive decimal number of standard deviation that defines the confidence intervals i.e. the error bars. If No.sd=0, no error bars are drawn. 
+The positive decimal number of standard deviation that defines the confidence intervals i.e. the error bars. If No.sd=0, no error bars are drawn.
 }
   \item{Sd.pr}{
 If Sd.pr=1, error bars for proportions are plotted  (with No.sd standard deviation confidence intervals). If Sd.pr=0, they are not plotted.
@@ -71,7 +75,7 @@ This is due to the fact that some data are not numerical in the entered dataset.
 
 \examples{
 data(address_AixesurVienne)
-digit.distr(address_AixesurVienne,mod="ben&blo",upbound=75,No.sd=1, Sd.pr=1)
+digit.distr(address_AixesurVienne,mod="ben&blo",lwbound=2,No.sd=1, Sd.pr=1)
 
 data(address_PierreBuffiere)
 digit.distr(address_PierreBuffiere,mod="blo",dig=2)

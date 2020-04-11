@@ -3,4 +3,3 @@ importFrom("grDevices", "dev.new")
 importFrom("graphics", "box", "hist", "lines")
 importFrom("stats", "pchisq")
 importFrom("ggplot2","ggplot","aes","position_dodge","labs","theme_classic","scale_fill_manual","geom_bar","geom_errorbar")
-
