@@ -1,5 +1,5 @@
 Blon.val <-
-function(lwbound,upbound,fig,dig=1,sd=0){
+function(lwbound=10**(dig-1),upbound,fig,dig=1,sd=0){
 if (lwbound>upbound) return("lwbound must be less than upbound")
 if (upbound<10**(dig-1)) return("upbound does not have enough digits")
 if (lwbound<(10**(dig-1))) return("lwbound does not have enough digits")

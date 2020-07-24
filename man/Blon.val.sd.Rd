@@ -8,7 +8,7 @@ Blondeau Da Silva's standard deviations
 The function returns the Blondeau Da Silva's standard deviation of the frequency of a digit at a given position (once the associated lower and upper bounds have been specified).
 }
 \usage{
-Blon.val.sd(lwbound, upbound, fig, dig = 1)
+Blon.val.sd(lwbound = 10^(dig - 1), upbound, fig, dig = 1)
 }
 
 \arguments{

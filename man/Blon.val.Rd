@@ -7,7 +7,7 @@ Blondeau Da Silva's values
 The function returns Blondeau Da Silva's probability that a figure is at a given position (once the associated lower and upper bounds have been specified) and, if requested, the associated standard deviation.
 }
 \usage{
-Blon.val(lwbound, upbound, fig, dig = 1, sd = 0)
+Blon.val(lwbound = 10^(dig - 1), upbound, fig, dig = 1, sd = 0)
 }
 
 \arguments{
@@ -32,7 +32,7 @@ If sd=0, only the probability is returned. Else, the function returns a datafram
 The function returns Blondeau Da Silva's probability and, if requested, its standard deviation.
 }
 \references{
-S. Blondeau Da Silva (2019). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics. \doi{10.1007/s40304-018-00172-1}.
+S. Blondeau Da Silva (2020). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics, 8:167-201. \doi{10.1007/s40304-018-00172-1}.
 
 S. Blondeau Da Silva (2018). Benford or not Benford: new results on digits beyond the first. \url{https://arxiv.org/abs/1805.01291}.
 }

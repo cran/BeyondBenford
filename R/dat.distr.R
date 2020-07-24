@@ -30,4 +30,4 @@ if (nchi!=0) {max=max(data,upbound); freq.obs=rep(0,nchi);
 	print(c("Class freq.: ",freq.obs)); print(c("Theor. freq.:",Blon.class));
 	if(Blon.class[nchi]<5) return("Chi2 can not be applied: at least one insufficient theoretical frequency") 
 	else {chi=0; for (i in 1:nchi) {chi=chi+(freq.obs[i]-Blon.class[i])**2/Blon.class[i]}; 			
-	return(data.frame(chi2=c("Chi2 value is:",nchi*chi),pval=c("The p-value is:",1-pchisq(nchi*chi,nchi-1))))}}}
+	return(data.frame(chi2=c("Chi2 value is:",chi),pval=c("The p-value is:",1-pchisq(chi,nchi-1))))}}}

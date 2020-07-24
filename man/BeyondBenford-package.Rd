@@ -19,7 +19,7 @@ F. Benford (1938). The law of anomalous numbers. Proceedings of the American Phi
 
 A. Berger and T. Hill (2015). An introduction to Benford's Law. Princeton University Press, Princeton, NJ. ISSN/ISBN: 978-0-691-16306-2.
 
-S. Blondeau Da Silva (2019). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics. \doi{10.1007/s40304-018-00172-1}.
+S. Blondeau Da Silva (2020). Benford or not Benford: a systematic but not always well-founded use of an elegant law in experimental fields. Communications in Mathematics and Statistics, 8:167-201. \doi{10.1007/s40304-018-00172-1}.
 
 S. Blondeau Da Silva (2018). Benford or not Benford: new results on digits beyond the first. \url{https://arxiv.org/abs/1805.01291}.
 
